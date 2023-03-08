@@ -13,8 +13,8 @@ public class RadioButton2 {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-radiobutton-demo.php");
+        driver.manage().window().maximize();
 
     List<WebElement>radioButtons=driver.findElements(By.xpath("//input[@name='ageGroup']"));
 

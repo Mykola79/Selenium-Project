@@ -24,32 +24,34 @@ check again if the checkbox is Selected or not*/
 
 
 
-        /*System.out.println(checkBox.isSelected());
+        System.out.println(checkBox.isSelected());
 
         if(!checkBox.isSelected()) {
             checkBox.click();}
 
             if (checkBox.isSelected()) {
                 System.out.println("Success - Check box is checked");
+
             } else {
-                System.out.println("Failure - Check box is unchecked");}*/
+                System.out.println("Failure - Check box is unchecked");}
 
         /*1. u need to write down the code that can select  1 check box out of 4 mentioned,
             e.g option1 , option2 , option 3, option 4
 
             Note: write down the logic in dynamic way i.e one change in if else condition can change ur selection*/
-        WebElement checkAll=driver.findElement(By.xpath("//input[@value='Check All']"));
+        /*WebElement checkAll=driver.findElement(By.xpath("//input[@value='Check All']"));
         checkAll.click();
 
         List<WebElement>checkBoxes=driver.findElements(By.className("cb1-element"));
 
         for (WebElement options:checkBoxes){
             String option=options.getAttribute("value");
+
             if(option.equalsIgnoreCase("Option-2")){
                 options.click();
                 System.out.println(options);
             }
-        }
+        }*/
 
 
 
