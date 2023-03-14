@@ -35,7 +35,5 @@ also please print the value of the attribute type of the button GET TOTAL*/
 
         driver.findElement(By.xpath("label[text()='Enter a']")).sendKeys("10");
 
-
-
     }
 }

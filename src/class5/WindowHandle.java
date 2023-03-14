@@ -20,8 +20,8 @@ public class WindowHandle {
         WebElement privacy = driver.findElement(By.xpath("//a[text()='Privacy']"));
         privacy.click();
 
-        String parentWindowHandler= driver.getWindowHandle();
-        System.out.println(parentWindowHandler);
+        //String parentWindowHandler= driver.getWindowHandle();
+        //System.out.println(parentWindowHandler);
 
         Set<String>windowHandles=driver.getWindowHandles();
         for (String allWindowHandles:windowHandles){

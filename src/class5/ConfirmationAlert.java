@@ -26,5 +26,5 @@ public class ConfirmationAlert {
         else{alert.dismiss();
             System.out.println("Alert dismissed");
         }
-    }
-}
+    }}
+
