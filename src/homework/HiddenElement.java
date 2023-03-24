@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
 
-public class ImplicitWait {
+public class HiddenElement {
     public static void main(String[] args){
         /*1.Open the Chrome browser and navigate to https://the-internet.herokuapp.com/dynamic_loading/1
 2.Click on the "Start" button to initiate the loading of a hidden element
@@ -23,23 +23,23 @@ public class ImplicitWait {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
 
-
-        driver.navigate().to("https://the-internet.herokuapp.com/dynamic_loading/1");
-
-
+        String URL="https://the-internet.herokuapp.com/dynamic_loading/1";
+        driver.navigate().to(URL);
 
         driver.findElement(By.xpath("//button")).click();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
-        WebElement helloText=driver.findElement(By.xpath("//*[@id='finish']/h4"));
+        driver.findElement(By.xpath("//div[@id='finish']")).click();
 
-        WebDriverWait webDriverWait=new WebDriverWait(driver,10);
-
-        //WebElement finish=webDriverWait.until(ExpectedConditions.elementToBeClickable(By))
-
-
-
-
-
-    }
+        //WebElement helloWorldText = driver.findElement(By.xpath("//div[@id='finish']/h4"));
+        WebElement helloWorldText = driver.findElement(By.xpath("//h4[text()='Hello World!']"));
+        String actualText = helloWorldText.getText();
+        System.out.println(actualText);
+        String expectedText = "Hello World!";
+        if (actualText.equals(expectedText)) {
+            System.out.println("Text verification passed!");
+        } else {
+            System.out.println("Text verification failed!");
+        }
+ }
 }

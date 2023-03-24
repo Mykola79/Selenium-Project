@@ -18,8 +18,5 @@ public class HandlingLastTwhoBoxes {
         for(int i=5;i<days.size();i++){
             days.get(i).click();
         }
-
-
     }
-
 }
