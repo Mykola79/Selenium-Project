@@ -52,7 +52,7 @@ public class TablesDemo {
             for (int i = 0; i < ids.size(); i++) {
                 String id = ids.get(i).getText();
 
-                if (id.equalsIgnoreCase("52097A")) {
+                if (id.equalsIgnoreCase("52381A")) {
 
                     System.out.println("id is on the row " + i);
 //                to click on the partivular checkbox

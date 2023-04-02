@@ -37,16 +37,18 @@ make sure that ur code is dynamic i.e
         List<WebElement> rows = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
         //System.out.println(rows.size());
 
-        for(int i=1;i<= rows.size();i++){//i = 1 incrementing by 1
-           WebElement row=driver.findElement (By.xpath("//table[@id='resultTable']/tbody/tr["+i+"]"));
+        for(int i=1;i<= rows.size();i++) {//i = 1 incrementing by 1
+            WebElement row = driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + i + "]"));
 
-           //convert into text
-           String text = row.getText();//this is the text
-            System.out.println("Row "+i+" data is "+text);
+            //convert into text
+            String text = row.getText();//this is the text
+            System.out.println("Row " + i + " data is " + text);
 
-            if(text.contains("52328A")){
-                driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+i+"]/td/input")).click();
+            if (text.contains("52381A")) {
+                driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + i + "]/td/input")).click();
+
+
             }
-
         }
-    }}
+    }
+}

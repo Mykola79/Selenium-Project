@@ -21,14 +21,14 @@ public class Calundar {
         calendar.click();
 
         WebElement month = driver.findElement(By.xpath("//span[@class='dl-datepicker-month-0']"));
-        month.click();
+
         WebElement next = driver.findElement(By.xpath("//span[text()='Next']"));
-        //next.click();
 
         boolean isFound = false;
 
         while (!isFound) {
             String month1 = month.getText();
+            System.out.println(month1);
 
             if (month1.equalsIgnoreCase("January")) {
 
@@ -37,6 +37,8 @@ public class Calundar {
                 for (WebElement day : days) {
 
                     String dayText = day.getText();
+
+                    System.out.println(dayText);
                     if (dayText.equalsIgnoreCase("20")) {
                         day.click();
                         isFound = true;
@@ -47,6 +49,6 @@ public class Calundar {
                 next.click();
             }
         }
+        }
     }
-}
 

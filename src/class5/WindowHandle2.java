@@ -16,7 +16,6 @@ public class WindowHandle2 {
 
         WebElement help = driver.findElement(By.xpath("//a[text()='Help']"));
         help.click();
-
         WebElement privacy = driver.findElement(By.xpath("//a[text()='Privacy']"));
         privacy.click();
 
